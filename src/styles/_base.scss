@@ -1,0 +1,439 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i);
+// @import url(https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i);
+
+/* Font Smoothing */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+td,
+button,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.navbar,
+.brand,
+.alert {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Poppins, Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: $font-weight-normal;
+}
+
+body{
+  font-size: 15px;
+}
+
+.cr-app {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.dataTables_paginate{
+  float: right;
+}
+
+.dataTables_info{
+  padding-top: 5px;
+}
+
+.pagination > .disabled > a, .pagination > .disabled > a:focus, .pagination > .disabled > a:hover, .pagination > .disabled > span, .pagination > .disabled > span:focus, .pagination > .disabled > span:hover {
+	color: #777;
+  cursor: not-allowed;
+  pointer-events: none;
+	background-color: #fff;
+	border-color: #ddd;
+}
+
+.pagination > li > a, .pagination > li > span {
+	background-color: #FFFFFF;
+	border: 1px solid #DDDDDD;
+	color: inherit;
+	float: left;
+	line-height: 1.42857;
+	margin-left: -1px;
+	padding: 4px 10px;
+	position: relative;
+	text-decoration: none;
+}
+
+.pagination > li {
+  display: inline;
+}
+
+.pagination > .active > a {
+  pointer-events: none;
+}
+
+.modal-dialog.modal-sm{
+  max-width: 400px;
+}
+
+.multi-preview{
+  width: 100%;
+}
+
+.multi-preview img{
+  display: inline-block;
+  width: 150px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 0 15px 15px 0;
+}
+
+.multi-preview.FullImage img{
+  width: 100%;
+}
+
+.ErrorMassge{
+  color: red;
+  margin-bottom: 15px;
+}
+
+.CardHeaderLeft{
+  float: left;
+  padding-top: 10px;
+}
+
+.CardHeaderRight{     
+  float: right;
+}
+
+.CardHeaderRight a.btn-secondary{  
+  background: brown;
+}
+
+.CardHeaderRight a.btn-secondary:hover{
+  opacity: 0.8;
+}
+
+textarea.CustomTextArea{
+  height: 150px;
+}
+
+.table th{
+  font-weight: 500;
+}
+
+.table th, .table td {
+  padding: 10px 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+.cr-page__header .cr-page__title{
+  font-size: 2rem;
+  margin-bottom: 1.4rem;
+}
+
+.starGray{
+  color: #ccc;
+}
+
+.starGolden{
+  color: goldenrod;
+}
+
+input[type="file"]{
+  opacity: 0;
+  height: 35px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.LoadingIcon{
+  position: absolute;
+  bottom: 9px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+}
+
+.LoadingIcon img{
+  width: 70px;
+}
+
+.TableLoader{
+  bottom: auto;
+  top: -10px;
+} 
+
+.TableLoader img{
+  width: 50px;
+}
+
+.UploadCustom{
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 150px;
+  pointer-events: none;
+}
+
+.CoverPhoto img{
+  width: 100%;
+  height: 345px;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+}
+
+.ProfilePhoto{
+  width: 200px;
+  margin: -100px auto 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 5px solid #fff;
+  height: 200px;
+}
+
+.ProfilePhoto img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+}
+
+.uploadWrap{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6); 
+  overflow: hidden;
+  opacity: 0;
+  -moz-transition: all .5s ease-out; 
+	-webkit-transition: all .5s ease-out; 
+	-o-transition: all .5s ease-out;
+}
+
+.ProfilePhoto:hover .uploadWrap{
+  opacity: 1;
+}
+
+.uploadWrap label{
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  height: 40px;
+  padding-top: 8px;
+}
+
+.uploadWrap i{
+  font-size: 20px;
+  color: #cccccc;
+}
+
+.UploadLogoFile{
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  height: 38px;
+  display: none;
+}
+
+.CoverUploadWrap{
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.modal-dialog{
+  top: 20%;
+}
+
+.CoverUploadWrap label{
+  background: rgba(255,255,255,0.7);
+  padding: 5px 15px;
+  border-radius: 9px;
+  margin: 0;
+  cursor: pointer;
+}
+
+#CoverPhoto{
+  display: none;
+}
+
+.shopDetails p span {
+  min-width: 110px;
+  display: inline-block;
+}
+ 
+.shopDetails p i{
+  width: 35px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 5px;
+  color: #696969;
+}
+
+.ShopCustomButton{
+  margin-right: 15px;
+  margin-top: 8px;
+}
+
+.CouponDetails.shopDetails p span{
+  min-width: 180px;
+}
+
+.cr-sidebar .nav .nav-link{
+  text-transform: uppercase;
+}
+
+
+.ProductImageWrap {
+  position: relative;
+  border: 1px solid #ccc;
+  height: 140px;
+}
+
+.ProductImageSize{
+  position: relative;
+  z-index: 1;
+}
+
+.ProductImageWrap label img {
+  width: 100%;
+  height: 138px;
+  object-fit: cover;
+}
+
+.uploadWraps{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.ProductImageWrap label{
+  width: 100%;
+  height: 100%;  
+  margin: 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.ProductImageWrap label i.fa-camera{
+  font-size: 85px;
+  color: #ddd;
+  padding: 27px 0;
+}
+
+.ActionFieldsWrap{
+  text-align: right;
+}
+.ActionField {
+	display: inline-block;
+	width: 160px;
+  border: 1px solid #e4e4e4;
+  padding: 5px;
+  margin-right: -1px;
+  margin-top: -1px;
+  vertical-align: top;
+  text-align: left;
+}
+.IconWrap {
+  width: 38px; 
+  margin-right: 7px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+.IconWrap i{
+  font-size: 30px;
+  color: #dedede;
+}
+
+.TextWrap{
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  font-size: 14px;
+}
+
+.TextWrap p.wrong{
+  color: red;
+}
+
+.TextWrap p.colorText, .tab-content > .tab-pane h4{
+  color: #7e7ca3;
+}
+.TextWrap p.GreenText{
+  color: #2fa05e;
+}
+
+.TextWrap p{
+  margin-bottom: 0px;
+  color: #4c4848;
+}
+
+
+.tab-content > .tab-pane {
+  padding: 25px 25px 0px;
+  background: #fff;
+  border-bottom: 1px solid #dee2e6;
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+}
+
+.nav-tabs .nav-link{
+  color: #7f7d99;
+}
+
+.commentsAlert{
+  position: relative;
+}
+
+.commentsAlert span {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  color: #fff;
+  font-size: 10px;
+  top: 5px;
+}
+
+.commentsAlert i{
+  font-size: 25px;
+}
+
+.CustomSmallButton.btn-sm{
+  padding: 0 5px;
+  line-height: normal;
+  font-size: 10px;
+}
+
+.CustomMessagesIcon{
+
+}
+
+.CustomMessagesIcon a div i.fa{
+  font-size: 20px;
+} 
+
+.CustomMessagesIcon a div span.position-absolute{
+  top: -7px;
+  border-radius: 100px;
+  right: -8px;
+}
